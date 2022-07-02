@@ -27,6 +27,7 @@ public class App {
         /*return Pattern.compile("\\b(.)(.*?)\\b")
                 .matcher(article)
                 .replaceAll(word -> word.group(1).toUpperCase() + word.group(2))
-                .replaceAll("\\s+", " ").strip();*/
+                .replaceAll("\\s+", " ")
+                .strip();*/
     }
 }
