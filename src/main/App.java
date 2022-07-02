@@ -9,11 +9,8 @@ import java.util.regex.Pattern;
 public class App {
 
     public static String Editor(List<String> toEdit){
-        // concat list of string to one string
-        String article = String.join(" ", toEdit);
-
-        // erase all digits
-        article = article.replaceAll("\\d", "");
+        // concat list of string to one string and erase all digits
+        String article = String.join(" ", toEdit).replaceAll("\\d", "");
 
         // splits string by words to array, so it can be iterated by words
         String[] words = article.split("\\b");
@@ -27,8 +24,9 @@ public class App {
         return result.replaceAll("\\s+", " ").strip();
 
         // the same but nicer with regex library
-        /*return Pattern.compile("\\b(.)(.*?)\\b").matcher(article).replaceAll(
-                word -> word.group(1).toUpperCase() + word.group(2)).replaceAll("\\s+", " ").strip();*/
-
+        /*return Pattern.compile("\\b(.)(.*?)\\b")
+                .matcher(article)
+                .replaceAll(word -> word.group(1).toUpperCase() + word.group(2))
+                .replaceAll("\\s+", " ").strip();*/
     }
 }
