@@ -1,6 +1,5 @@
 package main;
 
-import java.util.List;
 import java.util.regex.Pattern;
 
 /**
@@ -8,7 +7,7 @@ import java.util.regex.Pattern;
  */
 public class App {
 
-    public static String Editor(List<String> toEdit){
+    public static String Editor(String[] toEdit){
         // concat list of string to one string and erase all digits
         String article = String.join(" ", toEdit).replaceAll("\\d", "");
 
@@ -27,6 +26,7 @@ public class App {
         /*return Pattern.compile("\\b(.)(.*?)\\b")
                 .matcher(article)
                 .replaceAll(word -> word.group(1).toUpperCase() + word.group(2))
-                .replaceAll("\\s+", " ").strip();*/
+                .replaceAll("\\s+", " ")
+                .strip();*/
     }
 }
